@@ -1,15 +1,24 @@
 .work {
   .content {
     .navigation {
-      margin: 0.3rem 0;
+      margin: 0.5rem 0;
       display: flex;
       gap: 0.3rem;
       align-items: center;
       .nav-btn {
+        border-radius: 0.4rem;
         padding: 0.3rem;
         display: grid;
         place-items: center;
+        .nav-icons {
+          font-size: 1rem;
+        }
       }
+    }
+  }
+  .project-wrapper {
+    small {
+      color: grey;
     }
   }
   .project-poster {

@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+@import url("https://fonts.googleapis.com/css2?family=Syncopate&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import "./header";
 @import "./contact";
@@ -14,14 +15,14 @@ body {
   font-family: "Roboto", sans-serif;
   background: rgb(53, 53, 53);
   color: white;
-  padding-left: 2rem;
+  padding: 0 2rem 2rem 2rem;
 }
 ul {
   list-style: none;
 }
 
 section {
-  padding-top: 3rem;
+  padding: 3rem 0;
   p {
     margin: 0.8rem 0;
   }
@@ -54,21 +55,13 @@ section {
   font-weight: 500;
 }
 
-//progress bar
-.wrapper {
-  border: 3px solid blue;
-}
-
-.container {
-  background-color: pink;
-}
-
-.barCompleted {
-  background-color: lightblue;
-  width: 80%;
-}
-
-.label {
-  font-size: 20px;
-  color: green;
+footer {
+  h3,
+  h4 {
+    font-weight: 500;
+    text-align: right;
+  }
+  h4 {
+    color: grey;
+  }
 }

@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import mockup from "./assets/mockupclock.png";
 import react from "./assets/react.png";
@@ -7,24 +8,70 @@ import ruby from "./assets/ruby.png";
 import sass from "./assets/sass.png";
 import js from "./assets/javascript.png";
 import ProgressBar from "@ramonak/react-progress-bar";
-function App() {
+import { motion } from "framer-motion";
+
+interface AppPProps {}
+const App: React.FC<{ name?: string }> = () => {
   return (
     <main>
       <header className="main-header">
         <nav>
-          <h2 className="nav-links">00 ABOUT</h2>
-          <h2 className="nav-links">01 SKILLS</h2>
-          <h2 className="nav-links">02 EXP</h2>
-          <h2 className="nav-links">03 CONTACT</h2>
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            offset={-250}
+            spy={true}
+            className="nav-links"
+          >
+            ABOUT
+          </Link>
+          <Link
+            to="skills"
+            smooth={true}
+            duration={500}
+            offset={-50}
+            spy={true}
+            className="nav-links"
+          >
+            SKILLS
+          </Link>
+          <Link
+            to="work"
+            smooth={true}
+            duration={500}
+            offset={-50}
+            spy={true}
+            className="nav-links"
+          >
+            WORK
+          </Link>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            offset={-50}
+            spy={true}
+            className="nav-links"
+          >
+            CONTACT
+          </Link>
         </nav>
+        <header>
+          <h1 className="logo-title">EBENEZAR BUKOSIA</h1>
+        </header>
       </header>
-      <section className="about">
+      <section className="about" id="about">
         <header>
           <small className="section-name">About</small>
-          <h1 className="section-title">EBENEZAR BUKOSIA</h1>
+          <h1 className="section-title">Software Engineer</h1>
         </header>
+        <p>
+          I am an aspiring developer from Nairobi Kenya.Currently a student at
+          Moringa School enrolled in Full stack web development pathway.
+        </p>
       </section>
-      <section className="skills">
+      <section className="skills" id="skills">
         <header>
           <small className="section-name">SKILLS</small>
         </header>
@@ -113,7 +160,7 @@ function App() {
           </div>
         </article>
       </section>
-      <section className="work">
+      <section className="work" id="work">
         <header>
           <small className="section-name">Work</small>
           <h2 className="section-title">
@@ -122,13 +169,21 @@ function App() {
         </header>
         <article className="content">
           <div className="navigation">
-            <button className="btn nav-btn">
-              <IoIosArrowBack />
-            </button>
+            <motion.button
+              className="btn nav-btn"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <IoIosArrowBack className="nav-icons" />
+            </motion.button>
             4
-            <button className="btn nav-btn">
-              <IoIosArrowForward />
-            </button>
+            <motion.button
+              className="btn nav-btn"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <IoIosArrowForward className="nav-icons" />
+            </motion.button>
           </div>
           <div className="project-wrapper">
             <h3 className="project-name">Clock-me</h3>
@@ -137,14 +192,20 @@ function App() {
               project description. Lorem ipsum dolor sit amet consectetur,
               adipisicing elit. Quisquam, ea.
             </p>
-            <button className="btn btn-main">View project</button>
+            <motion.button
+              className="btn btn-main"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              View project
+            </motion.button>
           </div>
           <div className="project-poster">
             <img src={mockup} alt="" />
           </div>
         </article>
       </section>
-      <section className="contact">
+      <section className="contact" id="contact">
         <header>
           <small className="section-name">Contact</small>
           <h2 className="section-title">
@@ -156,11 +217,21 @@ function App() {
             Reach me on social media or by sending an email to
             ebenezarbukosia@gmail.com
           </p>
-          <button className="btn btn-main">Get in touch</button>
+          <motion.button
+            className="btn btn-main"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Get in touch
+          </motion.button>
         </div>
       </section>
+      <footer>
+        <h3>Ebenezar Bukosia Portfolio---©2022</h3>
+        <h4>Github---Ebenezr</h4>
+      </footer>
     </main>
   );
-}
+};
 
 export default App;
