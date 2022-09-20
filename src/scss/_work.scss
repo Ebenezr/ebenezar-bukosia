@@ -1,0 +1,21 @@
+.work {
+  .content {
+    .navigation {
+      margin: 0.3rem 0;
+      display: flex;
+      gap: 0.3rem;
+      align-items: center;
+      .nav-btn {
+        padding: 0.3rem;
+        display: grid;
+        place-items: center;
+      }
+    }
+  }
+  .project-poster {
+    height: auto;
+    img {
+      max-width: 100%;
+    }
+  }
+}
