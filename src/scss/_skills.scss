@@ -25,3 +25,37 @@
     }
   }
 }
+@media (min-width: 1000px) {
+  .skills {
+    .content {
+      .list-skills {
+        padding-top: 2rem;
+        display: grid;
+
+        width: 100%;
+        justify-items: space-between;
+        gap: clamp(0em, 3em, 5em);
+        grid-template-columns: repeat(6, 1fr);
+        .skill-card {
+          display: flex;
+          flex-direction: column;
+          gap: 0.3rem;
+          padding: 0.3em;
+
+          justify-content: center;
+          width: 6rem;
+          height: auto;
+
+          small {
+            justify-self: center;
+            align-self: center;
+          }
+          img {
+            max-width: 100%;
+            //background-color: rgb(39, 39, 39);
+          }
+        }
+      }
+    }
+  }
+}

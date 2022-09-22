@@ -1,6 +1,6 @@
 import { Link } from "react-scroll";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import mockup from "./assets/mockupclock.png";
+import mockup from "./assets/mockup.png";
 import react from "./assets/react.png";
 import rails from "./assets/rails.png";
 import ts from "./assets/ts.png";
@@ -50,7 +50,7 @@ const App: React.FC<{ name?: string }> = () => {
             to="contact"
             smooth={true}
             duration={500}
-            offset={-50}
+            offset={-100}
             spy={true}
             className="nav-links"
           >
@@ -74,9 +74,9 @@ const App: React.FC<{ name?: string }> = () => {
       <section className="skills" id="skills">
         <header>
           <small className="section-name">SKILLS</small>
+          <h2 className="section-title">I have a wide range of skills</h2>
         </header>
         <article className="content">
-          <p>I have a wide range of skills</p>
           <div className="list-skills">
             <div className="skill-card">
               <small>React</small>
@@ -189,8 +189,16 @@ const App: React.FC<{ name?: string }> = () => {
             <h3 className="project-name">Clock-me</h3>
             <small>Time card application</small>
             <p>
-              project description. Lorem ipsum dolor sit amet consectetur,
-              adipisicing elit. Quisquam, ea.
+              Clock-me is a web application helps to solve the problem of
+              tracing employees working time. This can be very essential
+              espesialy jobs that pays thier employees on hourly basis. the
+              application is also beneficial to a any company since it enables
+              them track thier working times of thier employees and know how to
+              optimize make thiem efficient. the application solve this such as
+              recoding each day's clock-in and clock-out timestamp and record it
+              in the database as string array. the application then uses the
+              timestamps to calculate how many hours the employee has been
+              working and compute the employees salary.
             </p>
             <motion.button
               className="btn btn-main"
@@ -199,9 +207,9 @@ const App: React.FC<{ name?: string }> = () => {
             >
               View project
             </motion.button>
-          </div>
-          <div className="project-poster">
-            <img src={mockup} alt="" />
+            <div className="project-poster">
+              <img src={mockup} alt="" />
+            </div>
           </div>
         </article>
       </section>
@@ -226,7 +234,7 @@ const App: React.FC<{ name?: string }> = () => {
           </motion.button>
         </div>
       </section>
-      <footer>
+      <footer className="footer">
         <h3>Ebenezar Bukosia Portfolio---©2022</h3>
         <h4>Github---Ebenezr</h4>
       </footer>

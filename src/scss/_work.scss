@@ -28,3 +28,36 @@
     }
   }
 }
+
+@media (min-width: 1000px) {
+  .content {
+    .navigation {
+      margin: 0.7rem 0;
+      gap: 0.5rem;
+      .nav-btn {
+        border-radius: 0.4rem;
+        padding: 0.3rem;
+        display: grid;
+        place-items: center;
+        .nav-icons {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .project-wrapper {
+    small {
+      color: grey;
+    }
+    .project-poster {
+      width: 100%;
+      max-height: 20rem;
+      display: grid;
+      place-items: center;
+      img {
+        //max-width: 100%;
+        max-height: 45rem;
+      }
+    }
+  }
+}
