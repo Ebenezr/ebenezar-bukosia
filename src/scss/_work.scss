@@ -20,11 +20,12 @@
     small {
       color: grey;
     }
-  }
-  .project-poster {
-    height: auto;
-    img {
-      max-width: 100%;
+    .project-poster {
+      margin-top: 1rem;
+      height: auto;
+      img {
+        max-width: 100%;
+      }
     }
   }
 }

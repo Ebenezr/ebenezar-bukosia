@@ -14,6 +14,8 @@
 body {
   font-family: "Roboto", sans-serif;
   background: rgb(53, 53, 53);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url(../assets/bg.png);
   color: white;
   padding: 0 2rem 2rem 2rem;
 }
